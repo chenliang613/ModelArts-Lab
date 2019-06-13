@@ -3,10 +3,10 @@
 
 * [ModelArts是否支持Keras?](#ModelArts是否支持Keras)
 * [创建Notebook时存储配置选择EVS和OBS有什么区别?](#创建Notebook时存储配置选择EVS和OBS有什么区别)
-* [使用pip install时出现“没有空间”的错误](#使用pip install时出现“没有空间”的错误)
+* [使用pip install时出现没有空间的错误](#使用pip install时出现没有空间的错误)
 * [Notebook中Upload之后文件上传到哪里了?](#Notebook中Upload之后文件上传到哪里了)
-* [Terminal中如何进入跟当前实例Notebook kernel一样的python环境](#Terminal中如何进入跟当前实例Notebook kernel一样的python环境)
-* [运行训练代码，出现“内存不够”问题，并导致实例崩溃](#运行训练代码，出现“内存不够”问题，并导致实例崩溃)
+* [Terminal中如何进入跟当前实例Notebook kernel一样的python环境](#Terminal中如何进入跟当前实例Notebook-kernel一样的python环境)
+* [运行训练代码出现内存不够问题并导致实例崩溃](#运行训练代码出现内存不够问题并导致实例崩溃)
 * [Notebook出现保存文件失败](#Notebook出现保存文件失败)
 
 ## ModelArts是否支持Keras?
@@ -25,7 +25,7 @@ TensorFlow Keras指南请参考：https://www.tensorflow.org/guide/keras?hl=zh-c
     如果用户需要将内容同步到实例空间，需要选中内容，单击Sync OBS按钮来实现将选中内容同步到当前容器空间。
  
 
-## 使用pip install时出现“没有空间”的错误
+## 使用pip install时出现没有空间的错误
 
 * 问题现象
 在Notebook实例中，使用pip install时，出现“No Space left...”的错误。
@@ -48,7 +48,7 @@ TensorFlow Keras指南请参考：https://www.tensorflow.org/guide/keras?hl=zh-c
 * 如果您使用Multi-Engine创建的Notebook实例（即一个Notebook可创建基于多种AI引擎的kernel）。
   在teminal的用户目录下，有一个“README”文件，此文件详细说明了如何切换不同的python环境。
 
-## 运行训练代码，出现“内存不够”问题，并导致实例崩溃
+## 运行训练代码出现内存不够问题并导致实例崩溃
 
 在Notebook实例中运行训练代码，如果数据量太大或者训练层数太多，亦或者或者其他原因，导致出现“内存不够”问题，最终导致该容器实例崩溃。
 出现此问题后，如果您重新打开此Notebook，系统将自动重启Notebook，来修复实例崩溃的问题。此时只是解决了崩溃问题，如果重新运行训练代码仍将失败。如果您需要解决“内存不够”的问题，建议您创建一个新的Notebook，使用更高规格的资源池，比如GPU或专属资源池来运行此训练代码。
